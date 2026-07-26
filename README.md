@@ -45,7 +45,7 @@ The AI module analyzes extracted website content and provides:
 
 ## SEO Analysis
 
-The system performs basic SEO evaluation by checking:
+The system performs website SEO evaluation by checking:
 
 - Meta Description
 - H1 Tag Presence
@@ -122,11 +122,11 @@ The platform calculates website statistics such as:
 Currently implemented:
 
 - OpenAI API
-- Python Dotenv for API key management
+- Python Dotenv for secure API key management
 
 Future AI model support:
 
-- Ollama for local Large Language Models
+- Ollama for running Local Large Language Models
 - Google Gemini API
 - LangChain Framework
 - FAISS Vector Database
@@ -144,3 +144,280 @@ The project architecture is designed to support local AI models and advanced RAG
 ---
 
 # Project Structure
+
+```
+AI-Powered-Website-Intelligence-Platform/
+
+│
+├── frontend/
+│
+│   ├── src/
+│   │
+│   │   ├── components/
+│   │   │
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   └── UrlForm.jsx
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│
+│   ├── main.py
+│   ├── ai.py
+│   ├── requirements.txt
+│   └── .env
+│
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+---
+
+# Installation and Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/rvitmonisha/AI-Powered-Website-Analysis-Platform.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd AI-Powered-Website-Analysis-Platform
+```
+
+---
+
+# Backend Setup
+
+Navigate to backend:
+
+```bash
+cd backend
+```
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate virtual environment:
+
+Windows PowerShell:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+Windows Command Prompt:
+
+```cmd
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+If requirements.txt is not available:
+
+```bash
+pip install fastapi uvicorn requests beautifulsoup4 openai python-dotenv
+```
+
+---
+
+# Environment Configuration
+
+Create a `.env` file inside the backend folder.
+
+Add your API key:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+```
+
+The API key is loaded securely using Python Dotenv.
+
+---
+
+# Running Backend Server
+
+Start FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend runs at:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# Frontend Setup
+
+Open a new terminal.
+
+Navigate to frontend:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start React development server:
+
+```bash
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# Running the Complete Project
+
+Two terminals are required.
+
+## Terminal 1 - Backend
+
+```bash
+cd backend
+
+.\venv\Scripts\Activate.ps1
+
+uvicorn main:app --reload
+```
+
+## Terminal 2 - Frontend
+
+```bash
+cd frontend
+
+npm run dev
+```
+
+Open browser:
+
+```
+http://localhost:5173
+```
+
+Enter any website URL to analyze.
+
+---
+
+# API Documentation
+
+## GET /
+
+Checks whether the backend server is running.
+
+Response:
+
+```json
+{
+    "message": "Backend is running!"
+}
+```
+
+---
+
+## POST /scrape
+
+Analyzes a website URL.
+
+Request:
+
+```json
+{
+    "url": "https://example.com"
+}
+```
+
+Response contains:
+
+- Website Title
+- Extracted Content
+- AI Analysis
+- Technology Detection
+- SEO Analysis
+- Website Statistics
+
+---
+
+# Development Process
+
+The project was developed using the following workflow:
+
+1. Created React frontend using Vite.
+2. Designed responsive user interface components.
+3. Added Tailwind CSS for styling.
+4. Added Axios for frontend-backend communication.
+5. Developed FastAPI backend.
+6. Implemented website scraping using BeautifulSoup.
+7. Added technology stack detection.
+8. Added SEO analysis features.
+9. Integrated AI-based website content analysis.
+10. Configured CORS communication between frontend and backend.
+11. Added Git version control and GitHub repository management.
+
+---
+
+# Future Enhancements
+
+Planned improvements:
+
+- Implement RAG-based website question answering
+- Add LangChain pipeline
+- Integrate FAISS vector database
+- Add Ollama local AI model support
+- Generate downloadable PDF reports
+- Store previous analysis history
+- Add user authentication
+- Improve technology detection accuracy
+- Add advanced SEO scoring system
+
+---
+
+# Project Objective
+
+The objective of this project is to create an intelligent website analysis platform that combines:
+
+- Full Stack Development
+- Artificial Intelligence
+- Web Scraping
+- Natural Language Processing
+- API Development
+
+This project demonstrates practical implementation of modern software engineering and AI technologies.
+
+---
+
+# Author
+
+**MN Monisha**
+
+AI-Powered Website Intelligence Platform
