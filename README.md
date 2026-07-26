@@ -415,9 +415,146 @@ The objective of this project is to create an intelligent website analysis platf
 This project demonstrates practical implementation of modern software engineering and AI technologies.
 
 ---
+# System Architecture
+
+The application follows a full-stack client-server architecture.
+
+## Workflow
+
+1. User enters a website URL through the React frontend.
+2. Frontend sends the URL request to FastAPI backend using Axios.
+3. Backend fetches website HTML content using Requests.
+4. BeautifulSoup extracts meaningful website information.
+5. The system analyzes:
+   - Website content
+   - SEO parameters
+   - Technologies used
+   - Website statistics
+6. Extracted content is sent to the AI module.
+7. AI generates website insights and recommendations.
+8. The final analysis result is displayed on the frontend.
+
+Architecture Flow:
+
+User
+ |
+ |
+React Frontend
+ |
+ |
+FastAPI Backend
+ |
+ |
+Website Scraper
+ |
+ |
+AI Analysis Module
+ |
+ |
+Response Dashboard
+
+# Key Learning Outcomes
+
+Through this project, the following concepts were implemented:
+
+## Frontend Development
+
+- Building reusable React components
+- Managing frontend state
+- API integration using Axios
+- Responsive UI development
+- Vite project setup
+
+## Backend Development
+
+- Creating REST APIs using FastAPI
+- Handling API requests and responses
+- Implementing CORS configuration
+- Exception handling
+- Data validation using Pydantic
+
+## Web Scraping
+
+- Extracting website HTML content
+- Parsing data using BeautifulSoup
+- Identifying website metadata
+- Collecting SEO information
+
+## Artificial Intelligence
+
+- Integrating AI APIs
+- Prompt-based content analysis
+- Generating automated website insights
+- Preparing architecture for RAG implementation
+
+## Software Engineering
+
+- Git version control
+- Project documentation
+- Environment variable management
+- Full-stack application development
+
+# Challenges Faced and Solutions
+
+## CORS Communication Issue
+
+Problem:
+Frontend was unable to communicate with backend because of browser CORS restrictions.
+
+Solution:
+Configured FastAPI CORSMiddleware to allow frontend development ports.
+
+---
+
+## Website Scraping Restrictions
+
+Problem:
+Some websites block automated requests.
+
+Solution:
+Implemented User-Agent headers and request timeout handling.
+
+---
+
+## AI API Key Security
+
+Problem:
+API keys should not be exposed publicly.
+
+Solution:
+Used environment variables with Python Dotenv.
+
+---
+
+## Technology Detection Accuracy
+
+Problem:
+Different websites use different frameworks and libraries.
+
+Solution:
+Implemented keyword-based technology detection from HTML source and scripts.
+
+# Security Considerations
+
+The project follows basic security practices:
+
+- API keys are stored using environment variables.
+- Sensitive configuration files are excluded using .gitignore.
+- User inputs are validated before processing.
+- Backend exceptions are handled properly.
+- External requests use timeout limits.
+
+# Performance Considerations
+
+The platform includes performance optimization techniques:
+
+- Request timeout handling for website fetching.
+- Limited content extraction to avoid unnecessary processing.
+- Lightweight BeautifulSoup parsing.
+- Efficient API communication between frontend and backend.
 
 # Author
 
-**MN Monisha**
+**M N Monisha**
 
-AI-Powered Website Intelligence Platform
+
