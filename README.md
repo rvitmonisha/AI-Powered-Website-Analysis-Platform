@@ -1,30 +1,32 @@
 # 🚀 AI-Powered Website Intelligence Platform
 
-An AI-powered web application that analyzes any website URL and provides comprehensive insights including content extraction, AI-generated summaries, SEO analysis, technology stack detection, and website statistics. This project demonstrates full-stack development using React and FastAPI while integrating AI capabilities for intelligent website analysis.
+An AI-powered web application that analyzes any website URL and provides comprehensive insights including website content extraction, AI-generated analysis, SEO evaluation, technology stack detection, and website statistics.
+
+This project demonstrates **Full Stack Development, Web Scraping, API Development, and AI Integration** using React, FastAPI, and AI technologies.
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
-The AI-Powered Website Intelligence Platform allows users to enter any website URL and instantly receive detailed analysis about the website.
+The **AI-Powered Website Intelligence Platform** allows users to enter any website URL and instantly receive detailed information about the website.
+
+The system extracts website data, analyzes content using AI, detects the technologies used in the website, and provides SEO performance insights.
 
 The platform performs:
 
 - 🌐 Website Content Extraction
-- 🤖 AI-Based Website Summary
+- 🤖 AI-Based Website Analysis
 - 💻 Technology Stack Detection
 - 🔍 SEO Analysis
 - 📊 Website Statistics
 - ⚡ Fast API Response
 - 🎨 Modern Responsive User Interface
 
-This project is designed as an industry-level placement project showcasing Full Stack Development, Web Scraping, API Development, and AI Integration.
-
 ---
 
 # ✨ Features
 
-### 🌍 Website Scraping
+## 🌍 Website Scraping
 
 Extracts:
 
@@ -36,7 +38,7 @@ Extracts:
 
 ---
 
-### 🤖 AI Analysis
+## 🤖 AI Website Analysis
 
 Generates:
 
@@ -49,7 +51,7 @@ Generates:
 
 ---
 
-### 🔍 SEO Analysis
+## 🔍 SEO Analysis
 
 Checks:
 
@@ -63,7 +65,7 @@ Checks:
 
 ---
 
-### 💻 Technology Detection
+## 💻 Technology Detection
 
 Automatically detects technologies such as:
 
@@ -82,7 +84,7 @@ Automatically detects technologies such as:
 
 ---
 
-### 📊 Website Statistics
+## 📊 Website Statistics
 
 Calculates:
 
@@ -102,29 +104,21 @@ Calculates:
 - Tailwind CSS
 - Axios
 
----
-
 ## Backend
 
 - Python
 - FastAPI
 - Uvicorn
 
----
-
 ## Web Scraping
 
 - BeautifulSoup4
 - Requests
 
----
-
 ## AI Integration
 
 - OpenAI API
 - Python Dotenv
-
----
 
 ## Version Control
 
@@ -136,89 +130,75 @@ Calculates:
 # 📁 Project Structure
 
 ```
-
 AI-Powered-Website-Intelligence-Platform/
 
 │
-
 ├── frontend/
-
-│ ├── src/
-
-│ │ ├── components/
-
-│ │ │ ├── Navbar.jsx
-
-│ │ │ ├── Hero.jsx
-
-│ │ │ └── UrlForm.jsx
-
-│ │
-
-│ ├── App.jsx
-
-│ └── main.jsx
-
 │
-
+│   ├── src/
+│   │
+│   │   ├── components/
+│   │   │
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   └── UrlForm.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── package.json
+│
 ├── backend/
-
-│ ├── main.py
-
-│ ├── ai.py
-
-│ ├── .env
-
-│ └── requirements.txt
-
 │
-
+│   ├── main.py
+│   ├── ai.py
+│   ├── requirements.txt
+│   └── .env
+│
 ├── .gitignore
-
-├── README.md
-
-└── LICENSE
-'''
-
-# ⚙️ Installation
-'''
-## 1. Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/AI-Powered-Website-Intelligence-Platform.git
+└── README.md
 ```
 
-## 2. Navigate to the Project Folder
+---
+
+# ⚙️ Installation and Setup
+
+## 1. Clone Repository
 
 ```bash
-cd AI-Powered-Website-Intelligence-Platform
+git clone https://github.com/rvitmonisha/AI-Powered-Website-Analysis-Platform.git
+```
+
+---
+
+## 2. Navigate to Project Folder
+
+```bash
+cd AI-Powered-Website-Analysis-Platform
 ```
 
 ---
 
 # 🖥️ Backend Setup
 
-## 1. Navigate to the Backend Folder
+## 1. Navigate to Backend Folder
 
 ```bash
 cd backend
 ```
 
-## 2. Create a Virtual Environment (First Time Only)
+---
+
+## 2. Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-## 3. Activate the Virtual Environment
+---
 
-### Windows (Command Prompt)
+## 3. Activate Virtual Environment
 
-```bash
-venv\Scripts\activate
-```
-
-### Windows (PowerShell)
+### Windows PowerShell
 
 ```powershell
 .\venv\Scripts\Activate.ps1
@@ -228,13 +208,11 @@ venv\Scripts\activate
 
 ## 4. Install Dependencies
 
-If you have a **requirements.txt** file:
-
 ```bash
 pip install -r requirements.txt
 ```
 
-Or install them manually:
+Or manually install:
 
 ```bash
 pip install fastapi uvicorn requests beautifulsoup4 openai python-dotenv
@@ -242,9 +220,15 @@ pip install fastapi uvicorn requests beautifulsoup4 openai python-dotenv
 
 ---
 
-## 5. Create a `.env` File
+## 5. Add Environment Variables
 
-Create a `.env` file inside the **backend** folder and add your API key:
+Create a file:
+
+```
+backend/.env
+```
+
+Add:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
@@ -252,13 +236,13 @@ OPENAI_API_KEY=your_openai_api_key
 
 ---
 
-## 6. Run the Backend Server
+## 6. Run Backend Server
 
 ```bash
 uvicorn main:app --reload
 ```
 
-The backend will start at:
+Backend runs at:
 
 ```
 http://127.0.0.1:8000
@@ -268,13 +252,15 @@ http://127.0.0.1:8000
 
 # 🎨 Frontend Setup
 
-## 1. Open a New Terminal
+Open another terminal.
 
-Navigate to the frontend folder:
+## 1. Navigate to Frontend
 
 ```bash
 cd frontend
 ```
+
+---
 
 ## 2. Install Dependencies
 
@@ -282,13 +268,15 @@ cd frontend
 npm install
 ```
 
-## 3. Start the React Development Server
+---
+
+## 3. Start React Application
 
 ```bash
 npm run dev
 ```
 
-The frontend will start at:
+Frontend runs at:
 
 ```
 http://localhost:5173
@@ -298,38 +286,93 @@ http://localhost:5173
 
 # 🚀 Running the Project
 
-Open **two terminals**.
+Open two terminals.
 
-### Terminal 1 (Backend)
+## Terminal 1 - Backend
 
 ```bash
 cd backend
-venv\Scripts\activate
+
+.\venv\Scripts\activate
+
 uvicorn main:app --reload
 ```
 
-### Terminal 2 (Frontend)
+---
+
+## Terminal 2 - Frontend
 
 ```bash
 cd frontend
+
 npm run dev
 ```
 
-Open your browser and visit:
+---
 
-**Frontend:** `http://localhost:5173`
+Open browser:
 
-**Backend API:** `http://127.0.0.1:8000`
+Frontend:
+
+```
+http://localhost:5173
+```
+
+Backend:
+
+```
+http://127.0.0.1:8000
+```
 
 ---
 
-# 📡 API Endpoint
+# 🔄 Application Workflow
+
+```
+User enters Website URL
+
+        ↓
+
+React Frontend
+
+        ↓
+
+Axios API Request
+
+        ↓
+
+FastAPI Backend
+
+        ↓
+
+BeautifulSoup Web Scraper
+
+        ↓
+
+Website Content Extraction
+
+        ↓
+
+AI Content Analysis
+
+        ↓
+
+SEO + Technology Detection
+
+        ↓
+
+Display Website Report
+```
+
+---
+
+# 📡 API Documentation
 
 ## GET /
 
-Checks whether the backend is running.
+Checks whether backend is running.
 
-**Response**
+Response:
 
 ```json
 {
@@ -343,7 +386,7 @@ Checks whether the backend is running.
 
 Analyzes a website URL.
 
-### Request
+Request:
 
 ```json
 {
@@ -351,14 +394,113 @@ Analyzes a website URL.
 }
 ```
 
-### Response
+Response contains:
 
 - Website Title
 - Website Content
-- AI Summary
+- AI Analysis
 - Technology Detection
 - SEO Analysis
 - Website Statistics
 - SEO Score
 
+---
 
+# 🔧 Development Process
+
+## Phase 1: Project Setup
+
+Completed:
+
+- Created React application using Vite
+- Created FastAPI backend
+- Configured frontend and backend structure
+
+---
+
+## Phase 2: Frontend Development
+
+Implemented:
+
+- Navbar Component
+- Hero Section
+- URL Input Form
+- Axios API Integration
+
+---
+
+## Phase 3: Backend Development
+
+Implemented:
+
+- FastAPI server
+- Website scraping API
+- HTML parsing
+- Content extraction
+
+---
+
+## Phase 4: AI Integration
+
+Implemented:
+
+- AI-based website analysis
+- Content summarization
+- SEO recommendations
+
+---
+
+## Phase 5: Website Intelligence Features
+
+Added:
+
+- Technology detection
+- SEO scoring
+- Website statistics
+- Link analysis
+
+---
+
+## Phase 6: GitHub Setup
+
+Completed:
+
+- Git initialization
+- Added .gitignore
+- Created commits
+- Connected GitHub repository
+- Uploaded project
+
+---
+
+# 🔮 Future Enhancements
+
+- Retrieval Augmented Generation (RAG)
+- FAISS Vector Database
+- Website Chatbot
+- PDF Report Generation
+- User Authentication
+- Analysis History Storage
+- Website Comparison
+- Cloud Deployment
+
+---
+
+# 🎯 Project Objective
+
+The objective of this project is to build an intelligent website analysis platform that combines:
+
+- Web Scraping
+- Artificial Intelligence
+- Natural Language Processing
+- Full Stack Development
+
+to automatically generate meaningful insights from any website.
+
+---
+
+# 👩‍💻 Author
+
+**rvitmonisha**
+
+AI-Powered Website Intelligence Platform
