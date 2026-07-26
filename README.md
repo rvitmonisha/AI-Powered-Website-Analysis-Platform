@@ -178,8 +178,10 @@ AI-Powered-Website-Intelligence-Platform/
 ├── README.md
 
 └── LICENSE
-# ⚙️ Installation
+'''
 
+# ⚙️ Installation
+'''
 ## 1. Clone the Repository
 
 ```bash
