@@ -4,3 +4,8 @@ requests
 beautifulsoup4
 openai
 python-dotenv
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+langchain-ollama

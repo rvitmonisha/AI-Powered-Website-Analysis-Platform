@@ -2,16 +2,17 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import UrlForm from "./components/UrlForm";
 
-function App() {
-  return (
-    <div>
-      <Navbar />
 
-      <Hero />
+function App(){
 
-      <UrlForm />
-    </div>
-  );
+return(
+<>
+<Navbar/>
+<Hero/>
+<UrlForm/>
+</>
+)
+
 }
 
 export default App;
