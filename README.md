@@ -2,9 +2,9 @@
 
 An AI-powered full-stack web application that analyzes any website URL and provides intelligent insights using web scraping, Artificial Intelligence, and Retrieval-Augmented Generation (RAG).
 
-The platform extracts website information, performs SEO analysis, detects technologies, generates AI-based reports, and allows users to ask questions about the analyzed website using a local Large Language Model.
+The platform extracts website content, performs SEO analysis, detects technologies used in the website, generates AI-based insights, and allows users to ask questions about the analyzed website using an AI-powered question-answering system.
 
-This project demonstrates Full Stack Development, Web Scraping, AI Integration, Natural Language Processing, and RAG-based Question Answering.
+This project demonstrates Full Stack Development, Web Scraping, REST API Development, Artificial Intelligence, Natural Language Processing, and RAG implementation.
 
 ---
 
@@ -12,17 +12,17 @@ This project demonstrates Full Stack Development, Web Scraping, AI Integration, 
 
 The AI Website Intelligence Platform allows users to enter any website URL and receive a complete analysis report.
 
-The system:
+The application:
 
-- Extracts website content
-- Generates AI-powered insights
+- Extracts website information
+- Generates AI-powered website analysis
 - Performs SEO evaluation
 - Detects website technologies
 - Calculates website statistics
 - Creates a searchable knowledge base
-- Allows users to ask questions about the website using AI
+- Provides AI question answering using website content
 
-The main objective is to build an intelligent website analysis system combining modern web technologies with Artificial Intelligence.
+The objective of this project is to build an intelligent website analysis system by combining modern web technologies with Artificial Intelligence.
 
 ---
 
@@ -30,7 +30,7 @@ The main objective is to build an intelligent website analysis system combining 
 
 ## Website Content Extraction
 
-The platform extracts:
+The platform extracts important information from websites:
 
 - Website Title
 - Headings (H1, H2, H3)
@@ -42,7 +42,7 @@ The platform extracts:
 
 # AI Website Analysis
 
-The AI module provides:
+The AI module analyzes website content and provides:
 
 - Website Purpose
 - Target Audience
@@ -55,47 +55,47 @@ The AI module provides:
 
 # RAG Based Question Answering
 
-The platform supports AI-based conversations with the analyzed website.
+The platform supports asking questions about the analyzed website.
 
-Implementation:
+The RAG pipeline works using:
 
-- Text chunking using LangChain Text Splitters
-- Semantic embeddings generation
-- FAISS vector database storage
-- Similarity-based document retrieval
-- Local LLM response generation using Ollama
+- Text splitting using LangChain
+- Sentence embeddings generation
+- FAISS vector database
+- Similarity search
+- Ollama Llama 3.2 Large Language Model
 
-Users can ask:
+Example questions:
 
 ```
 What is this website about?
 
 Who is the target audience?
 
-What are the main topics?
+What are the main topics of this website?
 ```
 
-The AI answers using only the extracted website content.
+The AI generates answers based only on the extracted website content.
 
 ---
 
 # SEO Analysis
 
-The system evaluates:
+The system evaluates website SEO factors:
 
 - Meta Description
 - H1 Tag Presence
 - Image Count
-- Images with ALT attributes
+- Images with ALT Attributes
 - SEO Score Calculation
 
 ---
 
 # Technology Detection
 
-The platform detects technologies used by websites.
+The application detects technologies used by websites.
 
-Supported technologies:
+Supported technologies include:
 
 - React
 - Vue.js
@@ -118,33 +118,23 @@ The platform calculates:
 
 - Total Word Count
 - Paragraph Count
-- Reading Time
+- Estimated Reading Time
 - Extracted Content Length
-
----
-
-# PDF Report Generation
-
-The application generates downloadable website analysis reports containing:
-
-- Website Title
-- AI Analysis
-- Website Insights
 
 ---
 
 # Website Analysis History
 
-The platform stores previous website analyses.
+The application stores previous website analyses.
 
 Stored information:
 
 - Website URL
 - Website Title
-- AI Analysis
+- AI Generated Analysis
 - SEO Score
 
-Database:
+Database used:
 
 - SQLite
 - SQLAlchemy ORM
@@ -161,6 +151,8 @@ Database:
 - Axios
 - JavaScript
 
+---
+
 ## Backend
 
 - Python
@@ -168,10 +160,14 @@ Database:
 - Uvicorn
 - REST API
 
+---
+
 ## Web Scraping
 
 - BeautifulSoup4
 - Requests
+
+---
 
 ## Artificial Intelligence
 
@@ -186,6 +182,7 @@ Implemented:
 ---
 
 # System Architecture
+
 
 ```
 User
@@ -203,7 +200,7 @@ FastAPI Backend
 Website Scraper
  |
  |
-Content Processing
+Content Extraction
  |
  |
 AI Analysis Module
@@ -264,7 +261,7 @@ AI-Powered-Website-Intelligence-Platform/
 git clone <repository-url>
 ```
 
-Navigate:
+Navigate into project:
 
 ```
 cd AI-Powered-Website-Intelligence-Platform
@@ -274,7 +271,7 @@ cd AI-Powered-Website-Intelligence-Platform
 
 # Backend Setup
 
-Navigate:
+Go to backend folder:
 
 ```
 cd backend
@@ -286,7 +283,7 @@ Create virtual environment:
 python -m venv venv
 ```
 
-Activate:
+Activate environment:
 
 Windows PowerShell:
 
@@ -302,13 +299,29 @@ pip install -r requirements.txt
 
 ---
 
-# Run Backend
+# Environment Configuration
+
+Create a `.env` file inside backend folder.
+
+Add required API configuration:
+
+```
+OPENAI_API_KEY=your_api_key
+```
+
+Environment variables are used to protect sensitive information.
+
+---
+
+# Running Backend
+
+Start FastAPI server:
 
 ```
 uvicorn main:app --reload
 ```
 
-Backend runs:
+Backend runs at:
 
 ```
 http://127.0.0.1:8000
@@ -332,13 +345,13 @@ Install packages:
 npm install
 ```
 
-Run:
+Start React application:
 
 ```
 npm run dev
 ```
 
-Frontend runs:
+Frontend runs at:
 
 ```
 http://localhost:5173
@@ -348,23 +361,29 @@ http://localhost:5173
 
 # API Endpoints
 
-## Home
+## Backend Status
 
 ```
 GET /
 ```
 
-Checks backend status.
+Response:
+
+```json
+{
+ "message":"Backend is running!"
+}
+```
 
 ---
 
-## Website Analysis
+## Website Analysis API
 
 ```
 POST /scrape
 ```
 
-Input:
+Request:
 
 ```json
 {
@@ -374,21 +393,22 @@ Input:
 
 Returns:
 
-- Website information
+- Website title
+- Extracted content
 - AI analysis
 - SEO details
-- Technology detection
-- Statistics
+- Technologies detected
+- Website statistics
 
 ---
 
-## Ask AI
+## AI Question Answering API
 
 ```
 POST /ask
 ```
 
-Example:
+Request:
 
 ```json
 {
@@ -396,74 +416,66 @@ Example:
 }
 ```
 
-Returns AI-generated answers from website data.
+Returns:
+
+AI generated answer based on website content.
 
 ---
 
-## Generate PDF
-
-```
-POST /generate-pdf
-```
-
-Creates website analysis report.
-
----
-
-## History
+## Website History API
 
 ```
 GET /history
 ```
 
-Returns previous website analyses.
+Returns previously analyzed websites.
 
 ---
 
-# Development Journey
+# Development Process
 
-The project was developed step-by-step:
+The project was developed through the following stages:
 
 1. Created React application using Vite.
 2. Designed frontend components.
 3. Added Tailwind CSS styling.
 4. Connected frontend and backend using Axios.
-5. Built FastAPI REST APIs.
-6. Implemented website scraping.
-7. Added SEO analysis.
-8. Added technology detection.
+5. Developed FastAPI REST APIs.
+6. Implemented website scraping using BeautifulSoup.
+7. Added SEO analysis features.
+8. Added technology stack detection.
 9. Integrated AI website analysis.
 10. Implemented RAG pipeline.
-11. Added FAISS vector search.
-12. Integrated Ollama Llama 3.2 local model.
-13. Added PDF report generation.
+11. Added LangChain text processing.
+12. Integrated FAISS vector database.
+13. Connected Ollama Llama 3.2 for AI responses.
 14. Added website analysis history storage.
 
 ---
 
-# Challenges Faced
+# Challenges Faced and Solutions
 
-## CORS Communication
+## CORS Communication Issue
 
 Problem:
 
-Frontend requests were blocked by browsers.
+Frontend requests were blocked due to browser security restrictions.
 
 Solution:
 
-Configured FastAPI CORS middleware.
+Configured FastAPI CORSMiddleware to allow frontend communication.
 
 ---
 
-## Website Blocking
+## Website Scraping Restrictions
 
 Problem:
 
-Some websites restrict automated requests.
+Some websites block automated requests.
 
 Solution:
 
-Added User-Agent headers and timeout handling.
+Implemented User-Agent headers and request timeout handling.
 
 ---
 
@@ -475,65 +487,68 @@ AI models may generate unrelated answers.
 
 Solution:
 
-Implemented RAG retrieval so answers are generated from website content.
+Implemented Retrieval-Augmented Generation (RAG) to provide context from website content.
 
 ---
 
-## API Key Security
+## Data Storage
 
 Problem:
 
-Sensitive keys should not be exposed.
+Previous website analyses needed to be stored.
 
 Solution:
 
-Used environment variables and .gitignore.
+Implemented SQLite database using SQLAlchemy ORM.
 
 ---
 
 # Learning Outcomes
 
-## Frontend
+## Frontend Development
 
 - React component development
 - State management
-- API integration
+- API integration using Axios
 - Responsive UI design
+- Vite setup
 
-## Backend
+## Backend Development
 
-- FastAPI development
-- REST API creation
-- Request validation
+- FastAPI REST API development
+- Request validation using Pydantic
+- CORS configuration
 - Database integration
 
-## AI
+## Artificial Intelligence
 
 - Prompt engineering
-- LangChain pipelines
+- LangChain workflow
+- Text embeddings
 - Vector databases
-- Embeddings
+- Retrieval-Augmented Generation
 - Local LLM integration
 
 ## Software Engineering
 
-- Git workflow
+- Git version control
 - Project documentation
-- Environment management
-- Full-stack architecture
+- Environment variable management
+- Full-stack application architecture
 
 ---
 
-# Future Improvements
+# Future Enhancements
 
-Possible enhancements:
+Possible improvements:
 
+- PDF report generation
 - User authentication
 - Cloud deployment
-- Better SEO scoring
 - Multiple website comparison
-- Advanced AI agents
-- More technology detection methods
+- Advanced SEO analysis
+- Better technology detection
+- AI agents for deeper website analysis
 
 ---
 
