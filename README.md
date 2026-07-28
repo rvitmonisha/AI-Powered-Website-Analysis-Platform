@@ -433,28 +433,28 @@ The project was developed using the following steps:
 
 The main interface where users enter a website URL for analysis.
 
-![Home Page](https://drive.google.com/file/d/14lfF0iYt1akcWSMYSTFo3to-GQWNi1kX/view?usp=drive_link)
+![Home Page](https://drive.google.com/file/d/1WVKeHw5af_3R0EKOy5Nu1cheLybjUc8r/view?usp=sharing)
 
 
 ## Website Analysis Result
 
 Displays extracted website information, technologies detected, SEO details, and statistics.
 
-![Analysis Result](https://drive.google.com/file/d/1K8_xi4meY3gfHgjv0zsDHvvdy_xLApTi/view?usp=drive_link)
+![Analysis Result](https://drive.google.com/file/d/1K8_xi4meY3gfHgjv0zsDHvvdy_xLApTi/view?usp=sharing)
 
 
 ## AI Website Analysis
 
 AI-generated insights including website purpose, target audience, SEO suggestions, and improvements.
 
-![AI Analysis](https://drive.google.com/file/d/1DkTBAVvw5Zl27aHWLjmfNWPjXegHaQbl/view?usp=drive_link)
+![AI Analysis](https://drive.google.com/file/d/1DkTBAVvw5Zl27aHWLjmfNWPjXegHaQbl/view?usp=sharing)
 
 
 ## SEO Analysis
 
 Shows SEO evaluation based on metadata, headings, images, and optimization factors.
 
-![SEO Result](https://drive.google.com/file/d/1Dsmq9v6QShwJ2QGxLB0f5ZU-QmcpR1SY/view?usp=drive_link)
+![SEO Result](https://drive.google.com/file/d/1Dsmq9v6QShwJ2QGxLB0f5ZU-QmcpR1SY/view?usp=sharing)
 
 ---
 
