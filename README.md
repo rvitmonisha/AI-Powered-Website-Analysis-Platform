@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<img src="backend/ccs/home-page.png" width="1000">
+<img src="backend/ccs/home page.png" width="1000">
 </p>
 
 
@@ -590,7 +590,7 @@ Request:
 
 
 <p align="center">
-<img src="backend/ccs/home-page.png" width="900">
+<img src="backend/ccs/home page.png" width="900">
 </p>
 
 
